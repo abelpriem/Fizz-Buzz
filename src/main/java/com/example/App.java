@@ -1,32 +1,18 @@
 package com.example;
 
-import java.util.Scanner;
-
 public final class App {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int number;
-
-        System.out.println();
-        System.out.println("¡El juego de Fizz-Buzz!");
-        System.out.println("Introduce un número: ");
-        number = scanner.nextInt();
-
-        System.out.println();
-
+    public static String getFizzBuzzResult(int number) {
         String string = String.valueOf(number);
 
         if (number % 3 == 0 && number % 5 == 0) {
-            System.out.println("Resultado: ¡Fizz-Buzz!");
+            return "Fizz-Buzz";
         } else if (number % 3 == 0 || string.contains("3")) {
-            System.out.println("Resultado: !Fizz!");
+            return "Fizz";
         } else if (number % 5 == 0 || string.contains("5")) {
-            System.out.println("Resultado: ¡Buzz!");
+            return "Buzz";
         } else {
-            System.out.println(number);
+            return String.valueOf(number);
         }
-
-        scanner.close();
     }
 }
